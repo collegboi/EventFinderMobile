@@ -7,15 +7,54 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.collegboi"
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.yourname.workshop"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.collegboi"
+            "PACKAGE_NAME": "com.yourname.workshop"
         },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.collegboi"
+        "cordova-plugin-contacts": {
+            "CONTACTS_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_IOS": "AIzaSyA3Y2FxDY-nmLjMJXLVnIFvM7MI4OlSx3I",
+            "NSLOCATIONWHENINUSEUSAGEDESCRIPTION": "Show your location on the map",
+            "NSLOCATIONALWAYSUSAGEDESCRIPTION": "Trace your location on the map",
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-mapbox": {
+            "ACCESS_TOKEN": "pk.eyJ1IjoiY29sbGVnYm9pIiwiYSI6ImNqMWRpaGZyOTAwMWkyd250dWNrazMwYmwifQ.PBhUlJXm5eH9Agyvwv41Vg",
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.yourname.workshop"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "com.googlemaps.ios": {
+            "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.yourname.workshop"
+        }
+    }
 }

@@ -2,28 +2,54 @@
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
+    HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
+    EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
+    EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
+    EmployeeLocView.prototype.template = Handlebars.compile($("#employee-loc-tpl").html());
+
     var service = new EmployeeService();
+    var slider = new PageSlider($('body'));
+
     service.initialize().done(function () {
-        console.log("Service initialized");
+        router.addRoute('', function() {
+            console.log('empty');
+            slider.slidePage(new HomeView(service).render().$el);
+        });
+
+        router.addRoute('employees/:id', function(id) {
+            console.log('details1');
+            service.findById(parseInt(id)).done(function(employee) {
+                slider.slidePage(new EmployeeView(employee).render().$el);
+            });
+        });
+
+        router.addRoute('location/employees/', function() {
+            console.log('details2');
+            slider.slidePage(new EmployeeLocView().render().$el);
+        });
+
+        router.start();
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
-    $('.search-key').on('keyup', findByName);
-    $('.help-btn').on('click', function() {
-        alert("Employee Directory v3.4");
-    });
+    document.addEventListener('deviceready', function () {
+        StatusBar.overlaysWebView( false );
+        StatusBar.backgroundColorByHexString('#ffffff');
+        StatusBar.styleDefault();
+
+        FastClick.attach(document.body);
+        if (navigator.notification) { // Override default HTML alert with native dialog
+            window.alert = function (message) {
+                navigator.notification.alert(
+                    message,    // message
+                    null,       // callback
+                    "Workshop", // title
+                    'OK'        // buttonName
+                );
+            };
+        }
+    }, false);
 
     /* ---------------------------------- Local Functions ---------------------------------- */
-    function findByName() {
-        service.findByName($('.search-key').val()).done(function (employees) {
-            var l = employees.length;
-            var e;
-            $('.employee-list').empty();
-            for (var i = 0; i < l; i++) {
-                e = employees[i];
-                $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
-            }
-        });
-    }
 
 }());
