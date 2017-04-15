@@ -8,6 +8,8 @@
     EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
     EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
     EmployeeLocView.prototype.template = Handlebars.compile($("#employee-loc-tpl").html());
+    AddEventView.prototype.template = Handlebars.compile($("#add-event-tpl").html());
+    AttendeesView.prototype.template = Handlebars.compile($("#attendees-event-tpl").html());
 
     var service = new EventService();
     var slider = new PageSlider($('body'));
@@ -19,7 +21,6 @@
             slider.slidePage(new HomeView(service).render().$el);
         });
 
-
         router.addRoute('register', function() {
             console.log('register');
             slider.slidePage(new RegisterView().render().$el);
@@ -30,16 +31,29 @@
             slider.slidePage(new HomeView(service).render().$el);
         });
 
-        router.addRoute('employees/:id', function(id) {
+        router.addRoute('event/:id', function(id) {
             console.log('details1');
-            service.findById(parseInt(id)).done(function(employee) {
-                slider.slidePage(new EmployeeView(employee).render().$el);
+            service.findById(id, function(output){
+                slider.slidePage(new EmployeeView(output).render().$el);
             });
         });
 
-        router.addRoute('location/employees/', function() {
+        router.addRoute('addEvent', function() {
+            console.log('addEvent');
+            slider.slidePage(new AddEventView().render().$el);
+        });
+
+         router.addRoute('event/attendees/:id', function(id) {
+            console.log('details1');
+            service.getAllAttendees(id, function(output){
+                //alert(output);
+                slider.slidePage(new AttendeesView(output).render().$el);
+            });
+        });
+
+        router.addRoute('location/events/', function(latitude, longitude) {
             console.log('details2');
-            slider.slidePage(new EmployeeLocView().render().$el);
+            slider.slidePage(new EmployeeLocView(latitude, longitude).render().$el);
         });
 
         router.start();

@@ -1,63 +1,42 @@
 var EventService = function() {
-    var url;
+    
+    var urlEvents = "http://104.236.108.142:8000/api/events/";
+    var urlAttendees = "http://104.236.108.142:8000/api/attendeesEvent/";
 
     this.initialize = function() {
-        url = "http://104.236.108.142:8000/api/events/";
         var deferred = $.Deferred();
         deferred.resolve();
         return deferred.promise();
     }
 
-    // this.getAll = function() {
-        
-       
-
-    //     //  $.ajax({
-    //     //         type: "GET",
-    //     //         url: url,
-    //     //         data: { }
-    //     //     }).done(function (data, status, xhr) {
-               
-    //     //        return data.features;
-
-    //     //         // var deferred = $.Deferred();
-    //     //         // alert(data.features);
-    //     //         // deferred.resolve(data.features);
-    //     //         // return deferred.promise();
-
-    //     //     }).fail(function (xhr, status, error) {
-    //     //         var message;
-    //     //         if ((!xhr.status) && (!navigator.onLine)) {
-    //     //             message += "Bad Internet Connection\n";
-    //     //         }
-    //     //         message += "Status: " + xhr.status + " " + xhr.responseText;
-    //     //         alert(message);
-    //     //     });
-    // }
+    this.getAllAttendees = function(id, handleData) {
+        $.ajax({
+            type: "GET",
+            url: urlAttendees + id,
+            success:function(data) {
+                handleData(data); 
+            }
+        });
+    }
 
     this.getAll = function(handleData) {
         $.ajax({
             type: "GET",
-            url: url,
+            url: urlEvents,
             success:function(data) {
                 handleData(data.features); 
             }
         });
     }
 
-
-     this.findById = function(id) {
-        var deferred = $.Deferred();
-        var employee = null;
-        var l = employees.length;
-        for (var i=0; i < l; i++) {
-            if (employees[i].id === id) {
-                employee = employees[i];
-                break;
+     this.findById = function(id, handleData) {
+         $.ajax({
+            type: "GET",
+            url: urlEvents + id,
+            success:function(data) {
+                handleData(data); 
             }
-        }
-        deferred.resolve(employee);
-        return deferred.promise();
+        });
     }
 
     this.findByName = function(searchKey) {

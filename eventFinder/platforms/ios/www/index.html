@@ -118,11 +118,6 @@
         <input class='search-key' type="search"/>
     </div>
     <div class="content">
-        <footer>
-                <ul id="menu">
-                    <li id="post-tab-button" class="tab-button" data-tab="#add-tab">Post an Event</li>
-                </ul>
-        </footer>
     </div>
 </script>
 
@@ -147,24 +142,34 @@
     <ul class="table-view">
         {{#each this}}
         <li class="table-view-cell media">
-            <a href="#employees/{{ id }}">
+            <a href="#event/{{ id }}">
                 <img class="media-object pull-left" src="assets/pics/{{pic}}">
                 <div class="media-body">
-                    {{type}} {{lastName}}
-                    <p>{{title}}</p>
+                    {{properties.name}}
+                    <p>{{properties.time}}</p>
+                    <p>{{properties.description}}</p>
                 </div>
             </a>
         </li>
         {{/each}}
     </ul>
+     <footer>
+        <div class="card">
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    <a href="#addEvent" id="add-event" class="add-event" style="text-align:center">Post an Event</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </script>
 
 <script id="employee-tpl" type="text/template">
     <header class="bar bar-nav">
-        <a class="btn btn-link btn-nav pull-left" href="#">
+        <a class="btn btn-link btn-nav pull-left" href="#home">
             <span class="icon icon-left-nav"></span>
         </a>
-        <h1 class="title">Employee</h1>
+        <h1 class="title">Event</h1>
     </header>
     <div class="content">
         <div class="card">
@@ -172,82 +177,121 @@
                 <li class="table-view-cell media">
                     <img class="media-object pull-left" src="assets/pics/Amy_Jones">
                     <div class="media-body">
-                        {{ type }} {{ lastName }}
-                        <p>{{ title }}</p>
+                        Name
+                        <p>{{ properties.name }}</p>
                     </div>
                 </li>
                 <li class="table-view-cell media">
-                    <a href="tel:{{ officePhone }}" class="push-right">
-                        <span class="media-object pull-left icon icon-call"></span>
-                        <div class="media-body">
-                            Call Office
-                            <p>{{ officePhone }}</p>
-                        </div>
-                    </a>
+                    <img class="media-object pull-left" src="assets/pics/Amy_Jones">
+                    <div class="media-body">
+                        Time
+                        <p>{{ properties.time }}</p>
+                    </div>
                 </li>
                 <li class="table-view-cell media">
-                    <a href="tel:{{ cellPhone }}" class="push-right">
-                        <span class="media-object pull-left icon icon-call"></span>
-                        <div class="media-body">
-                            Call Cell
-                            <p>{{ cellPhone }}</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="table-view-cell media">
-                    <a href="sms:{{ cellPhone }}" class="push-right">
-                        <span class="media-object pull-left icon icon-sms"></span>
-                        <div class="media-body">
-                            SMS
-                            <p>{{ cellPhone }}</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="table-view-cell media">
-                    <a href="mailto:{{ email }}" class="push-right">
-                        <span class="media-object pull-left icon icon-mail"></span>
-                        <div class="media-body">
-                            Email
-                            <p>{{ email }}</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="table-view-cell media">
-                    <a hre="#" class="push-right add-location-btn">
-                        <span class="media-object pull-left"></span>
-                        <div class="media-body">
-                            Add location
-                        </div>
-                    </a>
-                </li>
-                <li class="table-view-cell media">
-                    <a hre="#" class="push-right add-contact-btn">
-                        <span class="media-object pull-left"></span>
-                        <div class="media-body">
-                            Add to contacts
-                        </div>
-                    </a>
-                </li>
-                <li class="table-view-cell media">
-                    <a hre="#" class="push-right change-pic-btn">
-                        <span class="media-object pull-left"></span>
-                        <div class="media-body">
-                            Change Picture
-                        </div>
-                    </a>
+                    <img class="media-object pull-left" src="assets/pics/Amy_Jones">
+                    <div class="media-body">
+                        <p>{{ properties.description }}</p>
+                    </div>
                 </li>
                  <li class="table-view-cell media">
-                    <a href="#location/employees/" class="push-right">
+                    <a href="#location/events/" class="push-right">
                         <span class="media-object pull-left"></span>
                         <div class="media-body">
                             View location
                         </div>
                     </a>
                 </li>
+                  <li class="table-view-cell media">
+                    <img class="media-object pull-left" src="assets/pics/Amy_Jones">
+                    <div class="media-body">
+                        Owner
+                        <p>{{ properties.owner.username }}</p>
+                    </div>
+                </li>
+                 <li class="table-view-cell media">
+                    <a href="#event/attendees/{{ id }}" class="push-right">
+                        <span class="media-object pull-left"></span>
+                        <div class="media-body">
+                            View Attendees
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <input class="eventid" name="eventid" type="hidden" value="{{ id }}" />
+                </li>
+                <li class="table-view-cell media">
+                   <a class="icon pencil attend" style="text-align:center">Attend</a>
+                </li>
             </ul>
         </div>
     </div>
 </script>
+
+<script id="add-event-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" href="#home">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title">Add Event</h1>
+    </header>
+    <div class="content">
+        <div class="card">
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    Name
+                     <input class="name" name="name" type="text" placeholder="name" />
+                </li>
+                <li class="table-view-cell media">
+                    Description
+                    <textarea class="description" name="description" cols="40" rows="5"></textarea>
+                </li>
+               <li class="table-view-cell media">
+                    Time
+                     <input class="time" type="time" name="time" placeholder="time" />
+                </li>
+                <li class="table-view-cell media">
+                    Date
+                     <input class="date" type="date" data-date="" data-date-format="YYYY-MM-DD" value="2015-08-09">
+                </li>
+                 <li class="table-view-cell media">
+                    
+                </li>
+                 <li class="table-view-cell media">
+                     <a class="icon pencil add-location">Add Location</a>
+                </li>
+                <li class="table-view-cell media">
+                     <a class="icon pencil add-event" style="text-align:center">Add</a>
+                </li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="attendees-event-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" href="#home">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title">Attendees</h1>
+    </header>
+    <div class="content">
+        <ul class="table-view">
+            {{#each this}}
+            <li class="table-view-cell media">
+                <img class="media-object pull-left" src="assets/pics/{{pic}}">
+                <div class="media-body">
+                    {{attendee.username}}
+                    <p>{{attendee.first_name}}</p>
+                    <p>{{attendee.last_name}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+
 <script>
   var zoom = 10;
 
@@ -380,6 +424,81 @@
 <script src="js/EmployeeLocView.js"></script>
 <script src="js/LoginView.js"></script>
 <script src="js/RegisterView.js"></script>
+<script src="js/AddEventView.js"></script>
+<script src="js/AttendeesView.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
+
+
+ <!--<div class="card">-->
+            <!--<ul class="table-view">
+                <li class="table-view-cell media">
+                    <img class="media-object pull-left" src="assets/pics/Amy_Jones">
+                    <div class="media-body">
+                        Timothy
+                    </div>
+                </li>-->
+                <!--<li class="table-view-cell media">
+                    <span class="media-object pull-left icon icon-call"></span>
+                    <div class="media-body">
+                        Time
+                        <p>{{ time }}</p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <a href="tel:{{ cellPhone }}" class="push-right">
+                        <span class="media-object pull-left icon icon-call"></span>
+                        <div class="media-body">
+                            Call Cell
+                            <p>{{  }}</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <span class="media-object pull-left icon icon-sms"></span>
+                    <div class="media-body">
+                        <p>{{ description }}</p>
+                    </div>
+                </li>
+                <li class="table-view-cell media">
+                    <a href="" class="push-right">
+                        <span class="media-object pull-left icon icon-mail"></span>
+                        <div class="media-body">
+                            Attendees
+                        </div>
+                    </a>
+                </li>-->
+                <!--<li class="table-view-cell media">
+                    <a hre="#" class="push-right add-location-btn">
+                        <span class="media-object pull-left"></span>
+                        <div class="media-body">
+                            Add location
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a hre="#" class="push-right add-contact-btn">
+                        <span class="media-object pull-left"></span>
+                        <div class="media-body">
+                            Add to contacts
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a hre="#" class="push-right change-pic-btn">
+                        <span class="media-object pull-left"></span>
+                        <div class="media-body">
+                            Change Picture
+                        </div>
+                    </a>
+                </li>-->
+                 <!--<li class="table-view-cell media">
+                    <a href="#location/events/{{ geometry.coordinates[0] }}/{{geometry.coordinates[1]}}" class="push-right">
+                        <span class="media-object pull-left"></span>
+                        <div class="media-body">
+                            View location
+                        </div>
+                    </a>
+                </li>-->
+            <!--</ul>-->

@@ -1,4 +1,4 @@
-var EmployeeLocView = function () {
+var EmployeeLocView = function (latitude, longitude) {
 
     var map;
 
@@ -34,8 +34,8 @@ var EmployeeLocView = function () {
             'bottom': 100
             },
                 center: {
-                lat: 52.3702160,
-                lng: 4.8951680
+                lat: latitude,
+                lng: longitude
                 },
                 zoomLevel: zoom, // 0 (the entire world) to 20, default 10
                 showUserLocation: true, // default false
@@ -48,16 +48,9 @@ var EmployeeLocView = function () {
                 disablePitch: false, // default false
                 markers: [
                 {
-                    'lat': 52.3732160,
-                    'lng': 4.8941680,
+                    'lat': latitude,
+                    'lng': longitude,
                     'title': 'Nice location',
-                    'subtitle': 'Really really nice location',
-                    'image': 'www/img/markers/hi.jpg' // TODO support this on a rainy day
-                },
-                {
-                    'lat': 51.503364051,
-                    'lng': -0.1276250,
-                    'title': 'My location',
                     'subtitle': 'Really really nice location',
                     'image': 'www/img/markers/hi.jpg' // TODO support this on a rainy day
                 }

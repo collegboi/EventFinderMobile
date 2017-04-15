@@ -18,15 +18,9 @@ var HomeView = function (service) {
 
     this.loadView = function() {
 
-        service.makeAjaxCall(function(output){
+        service.getAll(function(output){
             eventListView.setEmployees(output);
         });
-
-        // service.getAll().done(function(employees) {
-        //     if(employees) {
-        //    //     eventListView.setEmployees(employees);
-        //     }
-        // });
     }
 
     this.findByName = function() {

@@ -36,7 +36,6 @@ var LoginView = function () {
                     if (!xhr.responseJSON.token) {
                         alert("Error logging in");
                     } else {
-
                         localStorage.authtoken = localStorage.authtoken = "Token " + xhr.responseJSON.token;
                         localStorage.username = $("#username").val();
                         localStorage.lastUserPwd = $("#password").val();
