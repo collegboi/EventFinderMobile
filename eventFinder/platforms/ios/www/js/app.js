@@ -3,19 +3,26 @@
 
     /* ---------------------------------- Local Variables ---------------------------------- */
     LoginView.prototype.template = Handlebars.compile($("#login-tpl").html());
+    RegisterView.prototype.template = Handlebars.compile($("#register-tpl").html());
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
     EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
     EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
     EmployeeLocView.prototype.template = Handlebars.compile($("#employee-loc-tpl").html());
 
-    var service = new EmployeeService();
+    var service = new EventService();
     var slider = new PageSlider($('body'));
 
     service.initialize().done(function () {
         router.addRoute('', function() {
             console.log('empty');
-            slider.slidePage(new LoginView().render().$el);
-            //slider.slidePage(new HomeView(service).render().$el);
+            //slider.slidePage(new LoginView().render().$el);
+            slider.slidePage(new HomeView(service).render().$el);
+        });
+
+
+        router.addRoute('register', function() {
+            console.log('register');
+            slider.slidePage(new RegisterView().render().$el);
         });
 
         router.addRoute('home', function() {

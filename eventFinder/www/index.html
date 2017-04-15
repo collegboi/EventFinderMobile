@@ -43,18 +43,16 @@
 
 <script id="login-tpl" type="text/template">
     <header class="bar bar-nav">
-        <h1 class="title">Events</h1>
+        <h1 class="title">Login</h1>
     </header>
     <div class="content">
          <div style="text-align:center">
             <br>
-            <br>
             <p>Welcome to Events where things happen</p>
             <br>
-            <br>
         </div>
-        <input name="username" type="text" placeholder="username" />
-        <input name="password" type="password" placeholder="password" />
+        <input id="username" name="username" type="text" placeholder="username" />
+        <input id="password" name="password" type="password" placeholder="password" />
 
         <div class="card">
             <ul class="table-view">
@@ -62,8 +60,51 @@
                      <a class="login-button" id="login-button" style="text-align:center" >Login</a>
                 </li>
                 <li class="table-view-cell media">
-                     <a href="#signup" class="icon pencil" style="text-align:center">Register</a>
+                     <a href="#register" class="icon pencil" style="text-align:center">Register</a>
                 </li>
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="register-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <h1 class="title">Register</h1>
+    </header>
+    <div class="content">
+        <div class="card">
+            <ul class="table-view">
+                <li class="table-view-cell media">
+                    Username
+                     <input class="username" name="username" type="text" placeholder="username" />
+                </li>
+               <li class="table-view-cell media">
+                    Email
+                     <input class="email" name="email" type="text" placeholder="email" />
+                </li>
+                <li class="table-view-cell media">
+                    First name
+                     <input class="first-name" name="first-name" type="text" placeholder="firstname" />
+                </li>
+                <li class="table-view-cell media">
+                    Last name
+                     <input class="last-name" name="last-name" type="text" placeholder="lastname" />
+                </li>
+                <li class="table-view-cell media">
+                    Password
+                     <input class="password" name="password" type="password" placeholder="password" />
+                </li>
+                <li class="table-view-cell media">
+                    Password again
+                     <input class="password-again" name="password-again" type="password" placeholder="password again" />
+                </li>
+                 <li class="table-view-cell media">
+                    
+                </li>
+                <li class="table-view-cell media">
+                     <a class="icon pencil new-register" style="text-align:center">Register</a>
+                </li>
+            </ul>
             </ul>
         </div>
     </div>
@@ -76,7 +117,13 @@
     <div class="bar bar-standard bar-header-secondary">
         <input class='search-key' type="search"/>
     </div>
-    <div class="content"></div>
+    <div class="content">
+        <footer>
+                <ul id="menu">
+                    <li id="post-tab-button" class="tab-button" data-tab="#add-tab">Post an Event</li>
+                </ul>
+        </footer>
+    </div>
 </script>
 
 <script id="employee-loc-tpl" type="text/template">
@@ -103,7 +150,7 @@
             <a href="#employees/{{ id }}">
                 <img class="media-object pull-left" src="assets/pics/{{pic}}">
                 <div class="media-body">
-                    {{firstName}} {{lastName}}
+                    {{type}} {{lastName}}
                     <p>{{title}}</p>
                 </div>
             </a>
@@ -123,9 +170,9 @@
         <div class="card">
             <ul class="table-view">
                 <li class="table-view-cell media">
-                    <img class="media-object pull-left" src="assets/pics/{{pic}}">
+                    <img class="media-object pull-left" src="assets/pics/Amy_Jones">
                     <div class="media-body">
-                        {{ firstName }} {{ lastName }}
+                        {{ type }} {{ lastName }}
                         <p>{{ title }}</p>
                     </div>
                 </li>
@@ -326,11 +373,13 @@
 <script src="lib/pageslider.js"></script>
 <script src="lib/router.js"></script>
 <script src="js/services/memory/EmployeeService.js"></script>
+<script src="js/services/json/EventService.js"></script>
 <script src="js/EmployeeListView.js"></script>
 <script src="js/HomeView.js"></script>
 <script src="js/EmployeeView.js"></script>
 <script src="js/EmployeeLocView.js"></script>
 <script src="js/LoginView.js"></script>
+<script src="js/RegisterView.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

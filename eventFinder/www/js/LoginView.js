@@ -1,12 +1,9 @@
 var LoginView = function () {
 
-    var homeView;
-    var service = new EmployeeService();
-
     this.initialize = function() {
         this.$el = $('<div/>');
         this.$el.on('click', '.login-button', this.tryLogin);
-        homeView = new HomeView();
+        //this.$el.on('click', '.signup', this.loadRegisterView);
         this.render();
     };
 
@@ -16,32 +13,48 @@ var LoginView = function () {
         return this;
     };
 
+    this.loadRegisterView = function() {
+        router.load("register");
+    }
+
     this.tryLogin = function() {
         alert("Logging in");
         
-        // var username = $("#username").val()
-        // var password = $("#password").val()
-        //  $.ajax({
-        //         type: "GET",
-        //         url: "http://104.236.108.142:8000/api/token-auth/?format=json&password=tester&username=timothy",
-        //         data: { }
-        //     }).done(function (data, status, xhr) {
-        //         localStorage.authtoken = localStorage.authtoken = "Token " + xhr.responseJSON.token;
-        //         localStorage.lastUserName = $("#in-username").val();
-        //         localStorage.lastUserPwd = $("#in-password").val();
-                
-        //         $.$el.changePage('#home',{ transition: "slide"});
-        //         // this.$el.load("#home");
-        //     }).fail(function (xhr, status, error) {
-        //         var message = "Login Failed\n";
-        //         if ((!xhr.status) && (!navigator.onLine)) {
-        //             message += "Bad Internet Connection\n";
-        //         }
-        //         message += "Status: " + xhr.status + " " + xhr.responseText;
-        //         alert(message);
-        //         //showOkAlert(message);
-        //         //logoutPressed();
-        //     });
+        var username = $("#username").val()
+        var password = $("#password").val()
+
+        if(!username || !password) {
+            alert("Fill all fields");
+        }else {
+        
+            $.ajax({
+                    type: "GET",
+                    url: "http://104.236.108.142:8000/api/token-auth/?format=json&password="+password+"&username="+username,
+                    data: { }
+                }).done(function (data, status, xhr) {
+
+                    if (!xhr.responseJSON.token) {
+                        alert("Error logging in");
+                    } else {
+
+                        localStorage.authtoken = localStorage.authtoken = "Token " + xhr.responseJSON.token;
+                        localStorage.username = $("#username").val();
+                        localStorage.lastUserPwd = $("#password").val();
+                        alert("Successfull");
+                        router.load("home");
+                    }
+                    
+                }).fail(function (xhr, status, error) {
+                    var message = "Login Failed\n";
+                    if ((!xhr.status) && (!navigator.onLine)) {
+                        message += "Bad Internet Connection\n";
+                    }
+                    message += "Status: " + xhr.status + " " + xhr.responseText;
+                    alert(message);
+                    //showOkAlert(message);
+                    //logoutPressed();
+                });
+        }
     }
 
     // this.findByName = function() {
