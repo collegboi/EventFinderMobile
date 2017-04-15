@@ -47,6 +47,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.yourname.workshop"
+        },
+        "cordova-plugin-fingerprint-login": {
+            "PACKAGE_NAME": "com.yourname.workshop"
         }
     },
     "dependent_plugins": {

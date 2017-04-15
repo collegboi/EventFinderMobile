@@ -18,5 +18,7 @@
     "AudioToolbox.framework": 1,
     "libc++.dylib": 1,
     "libsqlite3.dylib": 1,
-    "libz.dylib": 1
+    "libz.dylib": 1,
+    "LocalAuthentication.framework": 1,
+    "Security.framework": 1
 }

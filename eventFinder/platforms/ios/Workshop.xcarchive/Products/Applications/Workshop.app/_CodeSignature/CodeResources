@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		SjCn2OzHjoWrkP6uVCSPxlVSkjA=
+		ulgryGoTwOVKffrBhS6MzPRQSFs=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		y75bD1wkI57G28xc5UB/mZcqoKk=
+		xT28OVxR5jthW3izBfo3lcNenPU=
 		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
@@ -841,7 +841,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		emhTgyKNXKKVV/4kS6hajNXjSP0=
+		WSHeVRlXKCr9dZWo0Ki34uK1LwA=
 		</data>
 		<key>Mapbox.bundle/Compass.png</key>
 		<data>
@@ -918,7 +918,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		9dYj7ZocWm0uMni6S4I3g8tamb8=
+		Pt0PsEyAcWAuejtPgQL8YnevATI=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -1146,11 +1146,11 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		zwrRA7/DXxxlF8iOUL65vLakab8=
+		Ru2WJbC2g4I8Qxv+SlmPMnhyp/E=
 		</data>
 		<key>www/index.html</key>
 		<data>
-		YwmXmljhYS5yQLfz8PRNGRKTuPk=
+		n290gE4eiI48GJI4UfhxOXc4SQ0=
 		</data>
 		<key>www/js/EmployeeListView.js</key>
 		<data>
@@ -1168,9 +1168,13 @@
 		<data>
 		0x8eykYWbVQc67QLOgeumOJ5u+g=
 		</data>
+		<key>www/js/LoginView.js</key>
+		<data>
+		7+03pdSQcDjGr0nEPOkQzsdXr+M=
+		</data>
 		<key>www/js/app.js</key>
 		<data>
-		/fSAUOy62X3mB8S9jxBlz0HG/IU=
+		oRB6jLB9ZhwYKzM7KK7EDjgm9Qs=
 		</data>
 		<key>www/js/services/json/EventService.js</key>
 		<data>
@@ -1283,6 +1287,10 @@
 		<key>www/plugins/cordova-plugin-dialogs/www/notification.js</key>
 		<data>
 		BNzKfnkg7V/kfNCQoys8B0lNxu0=
+		</data>
+		<key>www/plugins/cordova-plugin-fingerprint-login/www/TouchID.js</key>
+		<data>
+		5NWkgQKYCL76LsUT/b3JxWynLwU=
 		</data>
 		<key>www/plugins/cordova-plugin-geolocation/www/Coordinates.js</key>
 		<data>
@@ -1543,11 +1551,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SjCn2OzHjoWrkP6uVCSPxlVSkjA=
+			ulgryGoTwOVKffrBhS6MzPRQSFs=
 			</data>
 			<key>hash2</key>
 			<data>
-			7kXRUvaA73FgrnuyA1mdcCTfZpnAltnQ3ZlOOPe6CqU=
+			yq5sDxZ0UPgQ6vnjkMnCdOIa0LoYPsT4sPiP1Y03hPM=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -1565,11 +1573,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y75bD1wkI57G28xc5UB/mZcqoKk=
+			xT28OVxR5jthW3izBfo3lcNenPU=
 			</data>
 			<key>hash2</key>
 			<data>
-			1xxG6fKplcaVt7JKbGM4S2SH0BaPRzL3szh4BKqajrY=
+			HQt/S18J5LZs/sVAZphCjj4CbuUiGRSsZjYt14CbiQs=
 			</data>
 		</dict>
 		<key>CDVNotification.bundle/beep.wav</key>
@@ -3103,11 +3111,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			emhTgyKNXKKVV/4kS6hajNXjSP0=
+			WSHeVRlXKCr9dZWo0Ki34uK1LwA=
 			</data>
 			<key>hash2</key>
 			<data>
-			vGYkUE4iyU+etZsoPjDM90/Ogeri45JPwrcMHHDiGTY=
+			yIJNBOEEGHIoY8IQgO5J+uA2oGbnrbri+9usjLghDmA=
 			</data>
 		</dict>
 		<key>Mapbox.bundle/Compass.png</key>
@@ -3292,11 +3300,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9dYj7ZocWm0uMni6S4I3g8tamb8=
+			Pt0PsEyAcWAuejtPgQL8YnevATI=
 			</data>
 			<key>hash2</key>
 			<data>
-			qvihmatvMkvbYXtH8Rad+XM2ztHOP7+YyEPmuVrEbVw=
+			w/wNspq78S6tJMDJWR/+Crtbu2ldGQFGlSMNoo6ybus=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -3919,22 +3927,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zwrRA7/DXxxlF8iOUL65vLakab8=
+			Ru2WJbC2g4I8Qxv+SlmPMnhyp/E=
 			</data>
 			<key>hash2</key>
 			<data>
-			I0RYnweBD+a8OggnuzPxwkaovNxE/rErXi9r1fIVzCM=
+			mfmhSAlLYq8psllK1InI8sN5bjgH+fTPuU2UCcZCvDI=
 			</data>
 		</dict>
 		<key>www/index.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YwmXmljhYS5yQLfz8PRNGRKTuPk=
+			n290gE4eiI48GJI4UfhxOXc4SQ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			cBxQw+VZQCINTEAVdc6gntoQ0IZ7zGKBVSoRW+V9BLE=
+			TqVvwg5V3VRSj+qaSKBX5TfKyHU4506991dCqBagWlI=
 			</data>
 		</dict>
 		<key>www/js/EmployeeListView.js</key>
@@ -3981,15 +3989,26 @@
 			wIs/Icts5bjjovy67bJLxYYmof286cPWPb7XqQE43wo=
 			</data>
 		</dict>
+		<key>www/js/LoginView.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7+03pdSQcDjGr0nEPOkQzsdXr+M=
+			</data>
+			<key>hash2</key>
+			<data>
+			M9MQEibtB4mff0/jh/fNx/VWEtEfKS6XTRGca2HYGW8=
+			</data>
+		</dict>
 		<key>www/js/app.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/fSAUOy62X3mB8S9jxBlz0HG/IU=
+			oRB6jLB9ZhwYKzM7KK7EDjgm9Qs=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Cxe9+WRXDPRGXnUDQCgWPtvouwe64NMOhxMwA7+KpA=
+			8uoj/PRY1AJ569/WJnfzni3mCHQCF3/l2h3St9b7ZaE=
 			</data>
 		</dict>
 		<key>www/js/services/json/EventService.js</key>
@@ -4298,6 +4317,17 @@
 			<key>hash2</key>
 			<data>
 			MTtx20AIWCwuND9bebwdwG7KZ69o0ZdZwHIujxB7YCI=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-fingerprint-login/www/TouchID.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5NWkgQKYCL76LsUT/b3JxWynLwU=
+			</data>
+			<key>hash2</key>
+			<data>
+			6PbBV1ay2HlIckleJKj2i4cEtE9eH6oCTVOYjsyHPus=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-geolocation/www/Coordinates.js</key>

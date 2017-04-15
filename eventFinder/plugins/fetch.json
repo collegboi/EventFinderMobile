@@ -111,5 +111,13 @@
         "variables": {
             "ACCESS_TOKEN": "pk.eyJ1IjoiY29sbGVnYm9pIiwiYSI6ImNqMWRpaGZyOTAwMWkyd250dWNrazMwYmwifQ.PBhUlJXm5eH9Agyvwv41Vg"
         }
+    },
+    "cordova-plugin-fingerprint-login": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-fingerprint-login"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

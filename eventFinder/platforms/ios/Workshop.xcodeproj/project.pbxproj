@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00AA9654B9244D7890F9A03F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98446B4F7D149B3B3DAD1E2 /* CoreData.framework */; };
 		01F92FAE85D441DF9056DF8C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FE9A136C7244D6B851ACA7 /* OpenGLES.framework */; };
@@ -75,6 +74,9 @@
 		FD5F5488562F47E6B2BFD3A7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6266BE3A6DC04C7CAFB605DC /* libz.tbd */; };
 		FE1A1F4E35A44C5CB864238E /* External.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EEB0E8187D43ACA25B39EE /* External.m */; };
 		FE1E6CA2BB43450A89E24B2A /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 926D99AC1E72463291E256F6 /* CDVSplashScreen.m */; };
+		0BFDE760D5AD49E38B6BC986 /* TouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A7FC35B464381B446B758 /* TouchID.m */; };
+		9962FD0F397B42C1B20FAE72 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDA9950C94641238CEA1197 /* LocalAuthentication.framework */; };
+		A7F3AF04D02B4E3590A0CA14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C488C914FB4BCE9DDDB73A /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +231,10 @@
 		F6B2B932A216449BAED0A8AF /* MGLGeometry.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = MGLGeometry.h; path = "cordova-plugin-mapbox/MGLGeometry.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Workshop/config.xml; sourceTree = "<group>"; };
 		FCE4D4EE8361400DB7EADCD7 /* MyPluginScrollView.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = MyPluginScrollView.h; path = "cordova-plugin-googlemaps/MyPluginScrollView.h"; sourceTree = "<group>"; };
+		5D5A7FC35B464381B446B758 /* TouchID.m */ = {isa = PBXFileReference; name = "TouchID.m"; path = "cordova-plugin-fingerprint-login/TouchID.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		41A1044A7D4F414D8E523812 /* TouchID.h */ = {isa = PBXFileReference; name = "TouchID.h"; path = "cordova-plugin-fingerprint-login/TouchID.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0FDA9950C94641238CEA1197 /* LocalAuthentication.framework */ = {isa = PBXFileReference; name = "LocalAuthentication.framework"; path = "System/Library/Frameworks/LocalAuthentication.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		98C488C914FB4BCE9DDDB73A /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +267,8 @@
 				EDDB49A6567C4851BFB6C180 /* libc++.dylib in Frameworks */,
 				107E711B2A6444BA92452C7C /* libsqlite3.dylib in Frameworks */,
 				5AE84AB41BF04221801B9B83 /* libz.dylib in Frameworks */,
+				9962FD0F397B42C1B20FAE72 /* LocalAuthentication.framework in Frameworks */,
+				A7F3AF04D02B4E3590A0CA14 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +367,8 @@
 				8011F329873944EA95457CF2 /* libc++.dylib */,
 				DF1EDCEB277D49E38A33626E /* libsqlite3.dylib */,
 				9EAC15579A484E53B20B67B0 /* libz.dylib */,
+				0FDA9950C94641238CEA1197 /* LocalAuthentication.framework */,
+				98C488C914FB4BCE9DDDB73A /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -470,6 +480,8 @@
 				931D8D7293DF4E5DA3B39B27 /* CDVViewController+SplashScreen.h */,
 				AFA479A5F301411B87F5008C /* CDVStatusBar.m */,
 				63113BB1DCB246B0BC6A56EC /* CDVStatusBar.h */,
+				5D5A7FC35B464381B446B758 /* TouchID.m */,
+				41A1044A7D4F414D8E523812 /* TouchID.h */,
 			);
 			name = Plugins;
 			path = Workshop/Plugins;
@@ -627,6 +639,7 @@
 				FE1E6CA2BB43450A89E24B2A /* CDVSplashScreen.m in Sources */,
 				AB5C236558874266B2D22DC3 /* CDVViewController+SplashScreen.m in Sources */,
 				701F3F49AA2D4637AA444DE7 /* CDVStatusBar.m in Sources */,
+				0BFDE760D5AD49E38B6BC986 /* TouchID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

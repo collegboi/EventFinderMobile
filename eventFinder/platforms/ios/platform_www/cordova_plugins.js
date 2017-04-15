@@ -228,6 +228,14 @@ module.exports = [
         "clobbers": [
             "window.StatusBar"
         ]
+    },
+    {
+        "id": "cordova-plugin-fingerprint-login.TouchID",
+        "file": "plugins/cordova-plugin-fingerprint-login/www/TouchID.js",
+        "pluginId": "cordova-plugin-fingerprint-login",
+        "clobbers": [
+            "window.plugins.touchid"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -245,7 +253,8 @@ module.exports.metadata =
     "cordova-plugin-mapbox": "1.2.3",
     "cordova-plugin-splashscreen": "4.0.1",
     "cordova-plugin-statusbar": "2.2.1",
-    "cordova-plugin-whitelist": "1.3.1"
+    "cordova-plugin-whitelist": "1.3.1",
+    "cordova-plugin-fingerprint-login": "0.3.4"
 };
 // BOTTOM OF METADATA
 });

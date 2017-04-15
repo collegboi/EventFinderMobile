@@ -2,6 +2,7 @@
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
+    LoginView.prototype.template = Handlebars.compile($("#login-tpl").html());
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
     EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
     EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
@@ -13,6 +14,12 @@
     service.initialize().done(function () {
         router.addRoute('', function() {
             console.log('empty');
+            slider.slidePage(new LoginView().render().$el);
+            //slider.slidePage(new HomeView(service).render().$el);
+        });
+
+        router.addRoute('home', function() {
+            console.log('home');
             slider.slidePage(new HomeView(service).render().$el);
         });
 
