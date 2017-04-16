@@ -4,9 +4,10 @@ var HomeView = function (service) {
 
     this.initialize = function() {
         this.$el = $('<div/>');
-        this.$el.on('keyup', '.search-key', this.findByName);
+        this.$el.on('search', '.search-key', this.findByName);
         eventListView = new EmployeeListView();
         this.loadView();
+        //this.findByName();
         this.render();
     };
 
@@ -24,9 +25,16 @@ var HomeView = function (service) {
     }
 
     this.findByName = function() {
-        service.findByName($('.search-key').val()).done(function(employees) {
-            eventListView.setEmployees(employees);
-        });
+
+        var name = $('.search-key').val();
+
+        //if (!name ) {
+       //     this.loadView();
+        //} else {
+            service.findByName(name,function(output){
+                eventListView.setEmployees(output);
+            });
+       // }
     };
 
     this.initialize();

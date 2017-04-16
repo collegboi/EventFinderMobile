@@ -115,7 +115,9 @@
         <h1 class="title">Events</h1>
     </header>
     <div class="bar bar-standard bar-header-secondary">
-        <input class='search-key' type="search"/>
+        <form>
+            <input class='search-key' type="search"/>
+        </form>
     </div>
     <div class="content">
     </div>
@@ -123,14 +125,13 @@
 
 <script id="employee-loc-tpl" type="text/template">
     <header class="bar bar-nav">
-        <a class="btn btn-link btn-nav pull-left" href="#">
+        <a class="btn btn-link btn-nav pull-left" href="#" onclick="hideMap()" >
             <span class="icon icon-left-nav"></span>
         </a>
         <h1 class="title">Employee Location</h1>
     </header>
     <div class="content">
         <button onclick="showMap()">Load Map</button>
-        <button onclick="hideMap()">Hide Map</button>
     </div>
 </script>
 
@@ -191,6 +192,7 @@
                 <li class="table-view-cell media">
                     <img class="media-object pull-left" src="assets/pics/Amy_Jones">
                     <div class="media-body">
+                        Description
                         <p>{{ properties.description }}</p>
                     </div>
                 </li>
@@ -221,7 +223,7 @@
                     <input class="eventid" name="eventid" type="hidden" value="{{ id }}" />
                 </li>
                 <li class="table-view-cell media">
-                   <a class="icon pencil attend" style="text-align:center">Attend</a>
+                   <a class="icon pencil add-attendee" style="text-align:center">Attend</a>
                 </li>
             </ul>
         </div>
@@ -315,7 +317,7 @@
     });
   }
 
-  function showMap() {
+  function showMap( latitude, longitude, name ) {
     Mapbox.show({
           style: 'emerald',
           margins: {
@@ -325,8 +327,8 @@
             'bottom': 100
           },
           center: {
-            lat: 52.3702160,
-            lng: 4.8951680
+            lat: localStorage.eventLat,
+            lng: localStorage.eventLon 
           },
           zoomLevel: zoom, // 0 (the entire world) to 20, default 10
           showUserLocation: true, // default false
@@ -339,17 +341,10 @@
           disablePitch: false, // default false
           markers: [
             {
-              'lat': 52.3732160,
-              'lng': 4.8941680,
-              'title': 'Nice location',
-              'subtitle': 'Really really nice location',
-              'image': 'www/img/markers/hi.jpg' // TODO support this on a rainy day
-            },
-            {
-              'lat': 51.503364051,
-              'lng': -0.1276250,
-              'title': 'My location',
-              'subtitle': 'Really really nice location',
+              'lat': localStorage.eventLat,
+              'lng': localStorage.eventLon,
+              'title': 'Event Location',
+              'subtitle': localStorage.eventName,
               'image': 'www/img/markers/hi.jpg' // TODO support this on a rainy day
             }
           ]

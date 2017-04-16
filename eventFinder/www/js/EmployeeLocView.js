@@ -1,6 +1,8 @@
-var EmployeeLocView = function (latitude, longitude) {
+var EmployeeLocView = function () {
 
     var map;
+
+    //let data = { "longitude":longitude, "latitude":latitude,"name":name };
 
     this.initialize = function() {
         this.$el = $('<div/>');

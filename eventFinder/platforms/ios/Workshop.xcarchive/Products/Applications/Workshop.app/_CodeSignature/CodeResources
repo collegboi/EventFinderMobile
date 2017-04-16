@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		cOIDEAr8Kl3MuO6e2+ZJNM1IC6E=
+		og1zYKZZAo3fApDcAkspebFLxc0=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		BsxQcFKJn0cBSxSk6vPs4O9IPq0=
+		TpdGumjSA0RSaMEj5d060Vrg1Co=
 		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
@@ -841,7 +841,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		Np9s0VQ9w+drjG0YSLSOlilqEDE=
+		4s2xpu/mIsb8opKFiotaKH7zMTI=
 		</data>
 		<key>Mapbox.bundle/Compass.png</key>
 		<data>
@@ -1150,11 +1150,11 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		j0ddQuZr5glzk+HZqZPOl7zW3jE=
+		Pa5LJDALk33DwhR9f1Bwz093yXU=
 		</data>
 		<key>www/js/AddEventView.js</key>
 		<data>
-		byg2450IOkVA05vo4Yr7tQO4OAY=
+		ml/OyDKl9RlUCMu8661y/zfBw+M=
 		</data>
 		<key>www/js/AttendeesView.js</key>
 		<data>
@@ -1166,19 +1166,19 @@
 		</data>
 		<key>www/js/EmployeeLocView.js</key>
 		<data>
-		d4TcXBDtsAe34rm++aWIxsRosrs=
+		Y/xBUkSmIPWVuS/zjkzpszehAQ0=
 		</data>
 		<key>www/js/EmployeeView.js</key>
 		<data>
-		UsxPUiFb3lJAGFNhu4mP27q62Q0=
+		k5OMZKT+tPVTIYsjZqWWQX/tlrA=
 		</data>
 		<key>www/js/HomeView.js</key>
 		<data>
-		38aEVhX9m5miXJmDNEefTWY+9tI=
+		Ycs+gqf98m9sZErQeplT+TRUD/U=
 		</data>
 		<key>www/js/LoginView.js</key>
 		<data>
-		JXcbA1VoxFCDuPPMFYaJ0iwcOvM=
+		GrjpEjzTmidZuInvGGqEdkuuS2c=
 		</data>
 		<key>www/js/RegisterView.js</key>
 		<data>
@@ -1186,11 +1186,11 @@
 		</data>
 		<key>www/js/app.js</key>
 		<data>
-		2Q1h1NWfZn+c8lGBHOh1pLjD3+c=
+		dtKPTGJoXIw7azMFIk9XcRzwYJo=
 		</data>
 		<key>www/js/services/json/EventService.js</key>
 		<data>
-		6WYoa4RkGXYsCH1lmbavSCjsXGA=
+		PpZ/lQCHua6O1gr1HzUpxLRYnTY=
 		</data>
 		<key>www/js/services/memory/EmployeeService.js</key>
 		<data>
@@ -1563,11 +1563,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cOIDEAr8Kl3MuO6e2+ZJNM1IC6E=
+			og1zYKZZAo3fApDcAkspebFLxc0=
 			</data>
 			<key>hash2</key>
 			<data>
-			vgUpckRCi05wykbLgzjX+HCeqH1vz12Ju/ko1ggsg9U=
+			VTLXD1/EeQfwIxfGjesiDa0gaQZau+HE6ELRcd+TKy8=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -1585,11 +1585,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BsxQcFKJn0cBSxSk6vPs4O9IPq0=
+			TpdGumjSA0RSaMEj5d060Vrg1Co=
 			</data>
 			<key>hash2</key>
 			<data>
-			LQCKT6kTTsgHqt307eiWi3OY4ITc2w4X81R3b9KugAY=
+			ztLcjWcpnUyjLTdQxg6ekMR0xJt5AkQwC9IAadqyTE4=
 			</data>
 		</dict>
 		<key>CDVNotification.bundle/beep.wav</key>
@@ -3123,11 +3123,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Np9s0VQ9w+drjG0YSLSOlilqEDE=
+			4s2xpu/mIsb8opKFiotaKH7zMTI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Cr7qKyr/0iosSrl2TE3G0Slj+smbDVb0u5yJOQ9sVLQ=
+			LrcvJ3BBc0o2a8h48BBEYETt2/wF1OSbneag2E3qQEU=
 			</data>
 		</dict>
 		<key>Mapbox.bundle/Compass.png</key>
@@ -3950,22 +3950,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j0ddQuZr5glzk+HZqZPOl7zW3jE=
+			Pa5LJDALk33DwhR9f1Bwz093yXU=
 			</data>
 			<key>hash2</key>
 			<data>
-			GnmAwpWG3VTumB7puAvKjAeJJfl6peILbjuWl9wI2V0=
+			EWIkYofx/pRwKzBU6BM9tQgIYP2YUySCpXBgApKeTBw=
 			</data>
 		</dict>
 		<key>www/js/AddEventView.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			byg2450IOkVA05vo4Yr7tQO4OAY=
+			ml/OyDKl9RlUCMu8661y/zfBw+M=
 			</data>
 			<key>hash2</key>
 			<data>
-			wEGPZHDoaRJ+iIuue7D/yazvGUBy0TX13i/2cEMPrcc=
+			z2rHb/ZGdCq365wHxegXjVlRGK3ByqV2JqX85drsr70=
 			</data>
 		</dict>
 		<key>www/js/AttendeesView.js</key>
@@ -3994,44 +3994,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d4TcXBDtsAe34rm++aWIxsRosrs=
+			Y/xBUkSmIPWVuS/zjkzpszehAQ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			RotDsM/ryBR8Rrf1/cKRPCyeALAJOt15egqGcnO65zk=
+			ogIfFkZm3H5l9y5/2fFOaLyIq/MOJqbmQCYhJGZ6MYw=
 			</data>
 		</dict>
 		<key>www/js/EmployeeView.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UsxPUiFb3lJAGFNhu4mP27q62Q0=
+			k5OMZKT+tPVTIYsjZqWWQX/tlrA=
 			</data>
 			<key>hash2</key>
 			<data>
-			u2IeIwmhs5oJVcnvsDlKAWyKEA4dwfyFzosqu+zJC3s=
+			Tnwd2bzuBrDUlrc/h9xC6ykmXK/BGLR3OrubvEInM4U=
 			</data>
 		</dict>
 		<key>www/js/HomeView.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			38aEVhX9m5miXJmDNEefTWY+9tI=
+			Ycs+gqf98m9sZErQeplT+TRUD/U=
 			</data>
 			<key>hash2</key>
 			<data>
-			UEZCnNUmOaH2DEnVE9Axr3XRG4weiGdIIwV1nDrC9GI=
+			T+zuAH2IFu8nqB+yNBMPZqG9LvjuJtcol2aZYEPuQUM=
 			</data>
 		</dict>
 		<key>www/js/LoginView.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JXcbA1VoxFCDuPPMFYaJ0iwcOvM=
+			GrjpEjzTmidZuInvGGqEdkuuS2c=
 			</data>
 			<key>hash2</key>
 			<data>
-			59RdM13VC7KJwer9rp3riFLhf0CWzh7Ton9m3uPv8SQ=
+			MLgVizMJIhT9qwu5KHwPXOClX+sDY2rVA7jFFdajAhs=
 			</data>
 		</dict>
 		<key>www/js/RegisterView.js</key>
@@ -4049,22 +4049,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2Q1h1NWfZn+c8lGBHOh1pLjD3+c=
+			dtKPTGJoXIw7azMFIk9XcRzwYJo=
 			</data>
 			<key>hash2</key>
 			<data>
-			3796ClWAcS1RPtoZx3xPcEAe4BWwhfUTLXJWs8wG0WI=
+			H6IRkMnsRj5b3gGOZFNdDLek0NZS6Z/PZ/9TjQ51oXg=
 			</data>
 		</dict>
 		<key>www/js/services/json/EventService.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6WYoa4RkGXYsCH1lmbavSCjsXGA=
+			PpZ/lQCHua6O1gr1HzUpxLRYnTY=
 			</data>
 			<key>hash2</key>
 			<data>
-			y6KX+NNA5aHhix99kMQALge5Txw08zKI1th8ii6QTl8=
+			oFiI0wga7LQSw5z28vn1WU1UrADVeLbR4eef9FB0HWw=
 			</data>
 		</dict>
 		<key>www/js/services/memory/EmployeeService.js</key>

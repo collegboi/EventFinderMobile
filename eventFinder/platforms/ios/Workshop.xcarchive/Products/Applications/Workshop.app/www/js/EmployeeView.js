@@ -7,16 +7,20 @@ var EmployeeView = function (event) {
     };
 
     this.render = function() {
+        //alert(event.geometry.coordinates[0]);
+        localStorage.eventName = event.properties.name;
+        localStorage.eventLon = event.geometry.coordinates[0];
+        localStorage.eventLat = event.geometry.coordinates[1];
         this.$el.html(this.template(event));
         return this;
     };
 
     this.addAttendee = function() {
 
-        var eventID = $(".eventid").val()
-        //var userID = $(".password-again").val()
+        var eventID = $(".eventid").val();
+        var data = { "event": eventID, "attendee": localStorage.userID };
 
-        var data = { "event": eventID, "owner": 3};
+        alert(data);
 
         var dataStr = JSON.stringify(data);
         
@@ -49,7 +53,6 @@ var EmployeeView = function (event) {
     }
 
     this.initialize();
-
 }
 
 // var EmployeeView = function(id) {

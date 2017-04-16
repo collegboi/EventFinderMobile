@@ -43,7 +43,7 @@ var AddEventView = function () {
             var data = {"name": name, 
                         "time": date+"T"+time, 
                         "description":description, 
-                        "owner":3,
+                        "owner":localStorage.userID,
                         "lat": localStorage.latitude ,
                         "lon": localStorage.longitude};
 

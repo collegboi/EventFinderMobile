@@ -51,9 +51,9 @@
             });
         });
 
-        router.addRoute('location/events/', function(latitude, longitude) {
+        router.addRoute('location/events/', function() {
             console.log('details2');
-            slider.slidePage(new EmployeeLocView(latitude, longitude).render().$el);
+            slider.slidePage(new EmployeeLocView(latitude, longitude, name).render().$el);
         });
 
         router.start();
