@@ -112,7 +112,9 @@
 
 <script id="home-tpl" type="text/template">
     <header class="bar bar-nav">
+        <!--<a class="icon pencil logp-out" style="text-align:left">Logout</a>-->
         <h1 class="title">Events</h1>
+        <a class="icon pencil view-map" style="text-align:right" href="#view-map" >Map</a>
     </header>
     <div class="bar bar-standard bar-header-secondary">
         <form>
@@ -128,10 +130,22 @@
         <a class="btn btn-link btn-nav pull-left" href="#" onclick="hideMap()" >
             <span class="icon icon-left-nav"></span>
         </a>
-        <h1 class="title">Employee Location</h1>
+        <h1 class="title">Event Location</h1>
     </header>
     <div class="content">
-        <button onclick="showMap()">Load Map</button>
+        <!--<button onclick="showMap()">Load Map</button>-->
+    </div>
+</script>
+
+<script id="all-events-loc-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" href="#" onclick="hideMap()" >
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title">All Event Locations</h1>
+    </header>
+    <div class="content">
+        <!--<button onclick="showAllMap({{events}})">Load Map</button>-->
     </div>
 </script>
 
@@ -315,52 +329,7 @@
     Mapbox.getZoomLevel(function (zl) {
       alert(zl)
     });
-  }
-
-  function showMap( latitude, longitude, name ) {
-    Mapbox.show({
-          style: 'emerald',
-          margins: {
-            'left': 0,
-            'right': 0,
-            'top': 100,
-            'bottom': 100
-          },
-          center: {
-            lat: localStorage.eventLat,
-            lng: localStorage.eventLon 
-          },
-          zoomLevel: zoom, // 0 (the entire world) to 20, default 10
-          showUserLocation: true, // default false
-          hideAttribution: true, // default false
-          hideLogo: true, // default false
-          hideCompass: false, // default false
-          disableRotation: false, // default false
-          disableScroll: false, // default false
-          disableZoom: false, // default false
-          disablePitch: false, // default false
-          markers: [
-            {
-              'lat': localStorage.eventLat,
-              'lng': localStorage.eventLon,
-              'title': 'Event Location',
-              'subtitle': localStorage.eventName,
-              'image': 'www/img/markers/hi.jpg' // TODO support this on a rainy day
-            }
-          ]
-        },
-        function (result) {
-          console.log(JSON.stringify(result));
-          // let's add a callback for these markers - invoked when the callout is tapped (Android) or the (i) icon in the marker callout (iOS)
-          Mapbox.addMarkerCallback(function (selectedMarker) {
-            alert("Marker selected: " + JSON.stringify(selectedMarker));
-          });
-        },
-        function (error) {
-          alert(error);
-        }
-    )
-  }
+  }  
 
   function hideMap() {
     Mapbox.hide({},
@@ -371,12 +340,6 @@
           alert(error);
         }
     )
-  }
-
-  function addGeoJSON() {
-    Mapbox.addGeoJSON({
-      'url': 'https://gist.githubusercontent.com/tmcw/10307131/raw/21c0a20312a2833afeee3b46028c3ed0e9756d4c/map.geojson'
-    });
   }
 
   function addMarkers() {
@@ -421,6 +384,7 @@
 <script src="js/RegisterView.js"></script>
 <script src="js/AddEventView.js"></script>
 <script src="js/AttendeesView.js"></script>
+<script src="js/EventMapView.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

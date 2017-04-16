@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		og1zYKZZAo3fApDcAkspebFLxc0=
+		K2/zqZ4hec4m5Bz2M5R8FUJlS/0=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		TpdGumjSA0RSaMEj5d060Vrg1Co=
+		TeeKM3X6YSXC2Uv14JUVZTG25aY=
 		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
@@ -841,7 +841,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		4s2xpu/mIsb8opKFiotaKH7zMTI=
+		zbW2miX4KnbSFeYo3kM5T9AudqI=
 		</data>
 		<key>Mapbox.bundle/Compass.png</key>
 		<data>
@@ -1150,7 +1150,7 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		Pa5LJDALk33DwhR9f1Bwz093yXU=
+		9d4hUUTCvjDLGFTskpLt9Yf+zeU=
 		</data>
 		<key>www/js/AddEventView.js</key>
 		<data>
@@ -1166,15 +1166,19 @@
 		</data>
 		<key>www/js/EmployeeLocView.js</key>
 		<data>
-		Y/xBUkSmIPWVuS/zjkzpszehAQ0=
+		ODoEyYIbjVT6rTFcq75ahTs/Yg0=
 		</data>
 		<key>www/js/EmployeeView.js</key>
 		<data>
-		k5OMZKT+tPVTIYsjZqWWQX/tlrA=
+		qMR6jBuOhLQDCCfQ46GRBt8lOFs=
+		</data>
+		<key>www/js/EventMapView.js</key>
+		<data>
+		Hrt94ebe4+X4yhNg2T9Qm6Wcpc4=
 		</data>
 		<key>www/js/HomeView.js</key>
 		<data>
-		Ycs+gqf98m9sZErQeplT+TRUD/U=
+		WQ28TQWDyXsp12P7MpACiy0wwZc=
 		</data>
 		<key>www/js/LoginView.js</key>
 		<data>
@@ -1186,7 +1190,7 @@
 		</data>
 		<key>www/js/app.js</key>
 		<data>
-		dtKPTGJoXIw7azMFIk9XcRzwYJo=
+		f8l2TZ5Uxd/+V+kdtvWtLI0pN+w=
 		</data>
 		<key>www/js/services/json/EventService.js</key>
 		<data>
@@ -1563,11 +1567,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			og1zYKZZAo3fApDcAkspebFLxc0=
+			K2/zqZ4hec4m5Bz2M5R8FUJlS/0=
 			</data>
 			<key>hash2</key>
 			<data>
-			VTLXD1/EeQfwIxfGjesiDa0gaQZau+HE6ELRcd+TKy8=
+			TtPoOZFjxvw2iAAIM5kf90dxJK8b74+Pxq2KhPjrsRk=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -1585,11 +1589,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TpdGumjSA0RSaMEj5d060Vrg1Co=
+			TeeKM3X6YSXC2Uv14JUVZTG25aY=
 			</data>
 			<key>hash2</key>
 			<data>
-			ztLcjWcpnUyjLTdQxg6ekMR0xJt5AkQwC9IAadqyTE4=
+			V6Kg0imtlURcfMq1CT2wKEruS6DAUMJBA+vWLNwOjaI=
 			</data>
 		</dict>
 		<key>CDVNotification.bundle/beep.wav</key>
@@ -3123,11 +3127,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4s2xpu/mIsb8opKFiotaKH7zMTI=
+			zbW2miX4KnbSFeYo3kM5T9AudqI=
 			</data>
 			<key>hash2</key>
 			<data>
-			LrcvJ3BBc0o2a8h48BBEYETt2/wF1OSbneag2E3qQEU=
+			TFTZNBtWRftrjwjZ1d7NGt5rSf7qbQQ/l4PMwo2ykSk=
 			</data>
 		</dict>
 		<key>Mapbox.bundle/Compass.png</key>
@@ -3950,11 +3954,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Pa5LJDALk33DwhR9f1Bwz093yXU=
+			9d4hUUTCvjDLGFTskpLt9Yf+zeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			EWIkYofx/pRwKzBU6BM9tQgIYP2YUySCpXBgApKeTBw=
+			mmsYsz926dg7hsSsTtvqZPkdgVgIElrzQLZGw9G5lbA=
 			</data>
 		</dict>
 		<key>www/js/AddEventView.js</key>
@@ -3994,33 +3998,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Y/xBUkSmIPWVuS/zjkzpszehAQ0=
+			ODoEyYIbjVT6rTFcq75ahTs/Yg0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ogIfFkZm3H5l9y5/2fFOaLyIq/MOJqbmQCYhJGZ6MYw=
+			9J3y4vgnQMEpIY3XTlL2nJQT+Vu2D16JW15DiJkqK94=
 			</data>
 		</dict>
 		<key>www/js/EmployeeView.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			k5OMZKT+tPVTIYsjZqWWQX/tlrA=
+			qMR6jBuOhLQDCCfQ46GRBt8lOFs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Tnwd2bzuBrDUlrc/h9xC6ykmXK/BGLR3OrubvEInM4U=
+			HfhIW/rRWg/s4mWGvZ5GJGqJLWVj74I3TE2sXl79CiU=
+			</data>
+		</dict>
+		<key>www/js/EventMapView.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Hrt94ebe4+X4yhNg2T9Qm6Wcpc4=
+			</data>
+			<key>hash2</key>
+			<data>
+			e9JlNyRR40ZEmJZX0kEuuuPwHZVXefOBneVESLBfotg=
 			</data>
 		</dict>
 		<key>www/js/HomeView.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ycs+gqf98m9sZErQeplT+TRUD/U=
+			WQ28TQWDyXsp12P7MpACiy0wwZc=
 			</data>
 			<key>hash2</key>
 			<data>
-			T+zuAH2IFu8nqB+yNBMPZqG9LvjuJtcol2aZYEPuQUM=
+			iNgzPw3XHQe5io3YZnflsl1Ws+qDyH6dz9gP1AGOV3U=
 			</data>
 		</dict>
 		<key>www/js/LoginView.js</key>
@@ -4049,11 +4064,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dtKPTGJoXIw7azMFIk9XcRzwYJo=
+			f8l2TZ5Uxd/+V+kdtvWtLI0pN+w=
 			</data>
 			<key>hash2</key>
 			<data>
-			H6IRkMnsRj5b3gGOZFNdDLek0NZS6Z/PZ/9TjQ51oXg=
+			jtsJ+aMIMP83aLYFJQfLW6Xd+KN3/9qD52whxnICCPI=
 			</data>
 		</dict>
 		<key>www/js/services/json/EventService.js</key>

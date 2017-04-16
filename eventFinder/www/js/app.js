@@ -10,6 +10,7 @@
     EmployeeLocView.prototype.template = Handlebars.compile($("#employee-loc-tpl").html());
     AddEventView.prototype.template = Handlebars.compile($("#add-event-tpl").html());
     AttendeesView.prototype.template = Handlebars.compile($("#attendees-event-tpl").html());
+    EventMapView.prototype.template = Handlebars.compile($("#all-events-loc-tpl").html());
 
     var service = new EventService();
     var slider = new PageSlider($('body'));
@@ -17,8 +18,8 @@
     service.initialize().done(function () {
         router.addRoute('', function() {
             console.log('empty');
-            //slider.slidePage(new LoginView().render().$el);
-            slider.slidePage(new HomeView(service).render().$el);
+            slider.slidePage(new LoginView().render().$el);
+            //slider.slidePage(new HomeView(service).render().$el);
         });
 
         router.addRoute('register', function() {
@@ -53,7 +54,16 @@
 
         router.addRoute('location/events/', function() {
             console.log('details2');
-            slider.slidePage(new EmployeeLocView(latitude, longitude, name).render().$el);
+            service.getAll(function(output){
+                slider.slidePage(new EmployeeLocView().render().$el);
+            });
+        });
+
+        router.addRoute('view-map', function() {
+            console.log(' view-map');
+            service.getAll(function(output){
+                slider.slidePage(new EventMapView(output).render().$el);
+            });
         });
 
         router.start();

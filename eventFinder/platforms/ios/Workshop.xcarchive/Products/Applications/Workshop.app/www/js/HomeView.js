@@ -28,13 +28,13 @@ var HomeView = function (service) {
 
         var name = $('.search-key').val();
 
-        //if (!name ) {
-       //     this.loadView();
-        //} else {
+        if (!name ) {
+            this.loadView();
+        } else {
             service.findByName(name,function(output){
                 eventListView.setEmployees(output);
             });
-       // }
+        }
     };
 
     this.initialize();

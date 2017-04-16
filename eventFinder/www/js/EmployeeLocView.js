@@ -1,76 +1,63 @@
 var EmployeeLocView = function () {
 
-    var map;
-
-    //let data = { "longitude":longitude, "latitude":latitude,"name":name };
-
     this.initialize = function() {
         this.$el = $('<div/>');
-        //this.$el.on('click', '.go-back-button', this.hideMap);
+        this.showEventMap();
         this.render();
     };
 
     this.render = function() {
         this.$el.html(this.template());
-        //alert("Map loading");
-        //this.showMap();
         return this;
     };
 
-    this.hideMap = function() {
-       alert("Map Hidding");
-       Mapbox.hide(
-            {},
-            this.onSuccess,
-            this.onError
-        );
-    }
+    
+    this.showEventMap = function() {
 
-    this.showMap = function() {
         Mapbox.show({
             style: 'emerald',
             margins: {
-            'left': 0,
-            'right': 0,
-            'top': 100,
-            'bottom': 100
+                'left': 0,
+                'right': 0,
+                'top': 48,
+                'bottom': 0
             },
-                center: {
-                lat: latitude,
-                lng: longitude
-                },
-                zoomLevel: zoom, // 0 (the entire world) to 20, default 10
-                showUserLocation: true, // default false
-                hideAttribution: true, // default false
-                hideLogo: true, // default false
-                hideCompass: false, // default false
-                disableRotation: false, // default false
-                disableScroll: false, // default false
-                disableZoom: false, // default false
-                disablePitch: false, // default false
-                markers: [
+            center: {
+                lat: localStorage.eventLat,
+                lng: localStorage.eventLon 
+            },
+            zoomLevel: zoom, // 0 (the entire world) to 20, default 10
+            showUserLocation: true, // default false
+            hideAttribution: true, // default false
+            hideLogo: true, // default false
+            hideCompass: false, // default false
+            disableRotation: false, // default false
+            disableScroll: false, // default false
+            disableZoom: false, // default false
+            disablePitch: false, // default false
+            markers: [
                 {
-                    'lat': latitude,
-                    'lng': longitude,
-                    'title': 'Nice location',
-                    'subtitle': 'Really really nice location',
-                    'image': 'www/img/markers/hi.jpg' // TODO support this on a rainy day
+                'lat': localStorage.eventLat,
+                'lng': localStorage.eventLon,
+                'title': 'Event Location',
+                'subtitle': localStorage.eventName,
+                'image': 'www/img/markers/hi.jpg' // TODO support this on a rainy day
                 }
-                ]
+            ]
             },
             function (result) {
-                console.log(JSON.stringify(result));
-                // let's add a callback for these markers - invoked when the callout is tapped (Android) or the (i) icon in the marker callout (iOS)
-                Mapbox.addMarkerCallback(function (selectedMarker) {
+            console.log(JSON.stringify(result));
+            // let's add a callback for these markers - invoked when the callout is tapped (Android) or the (i) icon in the marker callout (iOS)
+            Mapbox.addMarkerCallback(function (selectedMarker) {
                 alert("Marker selected: " + JSON.stringify(selectedMarker));
-                });
+            });
             },
             function (error) {
-                alert(error);
+            alert(error);
             }
         )
-
     }
+
 
     this.initialize();
 }

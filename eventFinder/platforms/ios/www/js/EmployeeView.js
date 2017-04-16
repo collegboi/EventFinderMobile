@@ -7,7 +7,6 @@ var EmployeeView = function (event) {
     };
 
     this.render = function() {
-        //alert(event.geometry.coordinates[0]);
         localStorage.eventName = event.properties.name;
         localStorage.eventLon = event.geometry.coordinates[0];
         localStorage.eventLat = event.geometry.coordinates[1];
