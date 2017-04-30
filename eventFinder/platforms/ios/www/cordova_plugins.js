@@ -166,6 +166,14 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-fingerprint-login.TouchID",
+        "file": "plugins/cordova-plugin-fingerprint-login/www/TouchID.js",
+        "pluginId": "cordova-plugin-fingerprint-login",
+        "clobbers": [
+            "window.plugins.touchid"
+        ]
+    },
+    {
         "id": "cordova-plugin-geolocation.Coordinates",
         "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
         "pluginId": "cordova-plugin-geolocation",
@@ -228,14 +236,6 @@ module.exports = [
         "clobbers": [
             "window.StatusBar"
         ]
-    },
-    {
-        "id": "cordova-plugin-fingerprint-login.TouchID",
-        "file": "plugins/cordova-plugin-fingerprint-login/www/TouchID.js",
-        "pluginId": "cordova-plugin-fingerprint-login",
-        "clobbers": [
-            "window.plugins.touchid"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -248,13 +248,13 @@ module.exports.metadata =
     "cordova-plugin-contacts": "2.2.1",
     "cordova-plugin-device-motion": "1.2.3",
     "cordova-plugin-dialogs": "1.3.1",
+    "cordova-plugin-fingerprint-login": "0.3.4",
     "cordova-plugin-geolocation": "2.4.1",
     "cordova-plugin-googlemaps": "1.4.0",
     "cordova-plugin-mapbox": "1.2.3",
     "cordova-plugin-splashscreen": "4.0.1",
     "cordova-plugin-statusbar": "2.2.1",
-    "cordova-plugin-whitelist": "1.3.1",
-    "cordova-plugin-fingerprint-login": "0.3.4"
+    "cordova-plugin-whitelist": "1.3.1"
 };
 // BOTTOM OF METADATA
 });

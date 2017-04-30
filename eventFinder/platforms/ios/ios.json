@@ -33,6 +33,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"TouchID\"><param name=\"ios-package\" value=\"TouchID\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
                         },
@@ -99,10 +103,6 @@
                         {
                             "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"TouchID\"><param name=\"ios-package\" value=\"TouchID\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
@@ -165,7 +165,7 @@
                     ],
                     "CFBundleURLTypes": [
                         {
-                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>com.yourname.workshop</string><key>CFBundleURLSchemes</key><array><string>com.yourname.workshop</string></array></dict></array>",
+                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>com.yourname.EventFinder</string><key>CFBundleURLSchemes</key><array><string>com.yourname.EventFinder</string></array></dict></array>",
                             "count": 1
                         }
                     ],
@@ -187,54 +187,54 @@
     },
     "installed_plugins": {
         "com.googlemaps.ios": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-camera": {
             "CAMERA_USAGE_DESCRIPTION": " ",
             "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-contacts": {
             "CONTACTS_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-device-motion": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
+        },
+        "cordova-plugin-fingerprint-login": {
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-geolocation": {
             "GEOLOCATION_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-googlemaps": {
             "API_KEY_FOR_IOS": "AIzaSyA3Y2FxDY-nmLjMJXLVnIFvM7MI4OlSx3I",
             "NSLOCATIONWHENINUSEUSAGEDESCRIPTION": "Show your location on the map",
             "NSLOCATIONALWAYSUSAGEDESCRIPTION": "Trace your location on the map",
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-mapbox": {
             "ACCESS_TOKEN": "pk.eyJ1IjoiY29sbGVnYm9pIiwiYSI6ImNqMWRpaGZyOTAwMWkyd250dWNrazMwYmwifQ.PBhUlJXm5eH9Agyvwv41Vg",
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.yourname.workshop"
-        },
-        "cordova-plugin-fingerprint-login": {
-            "PACKAGE_NAME": "com.yourname.workshop"
+            "PACKAGE_NAME": "com.yourname.EventFinder"
         }
     },
     "dependent_plugins": {},
@@ -405,6 +405,14 @@
             ]
         },
         {
+            "id": "cordova-plugin-fingerprint-login.TouchID",
+            "file": "plugins/cordova-plugin-fingerprint-login/www/TouchID.js",
+            "pluginId": "cordova-plugin-fingerprint-login",
+            "clobbers": [
+                "window.plugins.touchid"
+            ]
+        },
+        {
             "id": "cordova-plugin-geolocation.Coordinates",
             "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
             "pluginId": "cordova-plugin-geolocation",
@@ -467,14 +475,6 @@
             "clobbers": [
                 "window.StatusBar"
             ]
-        },
-        {
-            "id": "cordova-plugin-fingerprint-login.TouchID",
-            "file": "plugins/cordova-plugin-fingerprint-login/www/TouchID.js",
-            "pluginId": "cordova-plugin-fingerprint-login",
-            "clobbers": [
-                "window.plugins.touchid"
-            ]
         }
     ],
     "plugin_metadata": {
@@ -485,12 +485,12 @@
         "cordova-plugin-contacts": "2.2.1",
         "cordova-plugin-device-motion": "1.2.3",
         "cordova-plugin-dialogs": "1.3.1",
+        "cordova-plugin-fingerprint-login": "0.3.4",
         "cordova-plugin-geolocation": "2.4.1",
         "cordova-plugin-googlemaps": "1.4.0",
         "cordova-plugin-mapbox": "1.2.3",
         "cordova-plugin-splashscreen": "4.0.1",
         "cordova-plugin-statusbar": "2.2.1",
-        "cordova-plugin-whitelist": "1.3.1",
-        "cordova-plugin-fingerprint-login": "0.3.4"
+        "cordova-plugin-whitelist": "1.3.1"
     }
 }
