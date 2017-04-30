@@ -40,6 +40,7 @@ var LoginView = function () {
                         localStorage.userID = xhr.responseJSON.id;
                         localStorage.username = $("#username").val();
                         localStorage.lastUserPwd = $("#password").val();
+                        localStorage.login = 1                        
                         alert("Successfull");
                         router.load("home");
                     }

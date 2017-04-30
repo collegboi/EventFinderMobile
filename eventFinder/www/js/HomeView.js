@@ -5,7 +5,7 @@ var HomeView = function (service) {
     this.initialize = function() {
         this.$el = $('<div/>');
         this.$el.on('search', '.search-key', this.findByName);
-        eventListView = new EmployeeListView();
+        eventListView = new EventsListView();
         this.loadView();
         //this.findByName();
         this.render();
@@ -20,7 +20,7 @@ var HomeView = function (service) {
     this.loadView = function() {
 
         service.getAll(function(output){
-            eventListView.setEmployees(output);
+            eventListView.setEvents(output);
         });
     }
 
@@ -32,7 +32,7 @@ var HomeView = function (service) {
             this.loadView();
         } else {
             service.findByName(name,function(output){
-                eventListView.setEmployees(output);
+                eventListView.setEvents(output);
             });
         }
     };

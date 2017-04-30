@@ -1,4 +1,4 @@
-var EmployeeView = function (event) {
+var EventView = function (event) {
 
     this.initialize = function() {
         this.$el = $('<div/>');
@@ -53,8 +53,6 @@ var EmployeeView = function (event) {
 
     this.initialize();
 }
-
-// var EmployeeView = function(id) {
 
 //     this.initialize = function() {
 //         this.$el = $('<div/>');

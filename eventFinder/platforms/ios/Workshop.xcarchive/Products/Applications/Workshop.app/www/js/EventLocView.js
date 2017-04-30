@@ -1,4 +1,4 @@
-var EmployeeLocView = function () {
+var EventLocView = function () {
 
     this.initialize = function() {
         this.$el = $('<div/>');

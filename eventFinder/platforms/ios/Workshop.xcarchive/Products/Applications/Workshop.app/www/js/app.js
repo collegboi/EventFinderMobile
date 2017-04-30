@@ -5,9 +5,9 @@
     LoginView.prototype.template = Handlebars.compile($("#login-tpl").html());
     RegisterView.prototype.template = Handlebars.compile($("#register-tpl").html());
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
-    EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
-    EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
-    EmployeeLocView.prototype.template = Handlebars.compile($("#employee-loc-tpl").html());
+    EventsListView.prototype.template = Handlebars.compile($("#event-list-tpl").html());
+    EventView.prototype.template = Handlebars.compile($("#event-tpl").html());
+    EventLocView.prototype.template = Handlebars.compile($("#event-loc-tpl").html());
     AddEventView.prototype.template = Handlebars.compile($("#add-event-tpl").html());
     AttendeesView.prototype.template = Handlebars.compile($("#attendees-event-tpl").html());
     EventMapView.prototype.template = Handlebars.compile($("#all-events-loc-tpl").html());
@@ -18,13 +18,22 @@
     service.initialize().done(function () {
         router.addRoute('', function() {
             console.log('empty');
-            //slider.slidePage(new LoginView().render().$el);
-            slider.slidePage(new HomeView(service).render().$el);
+            if (localStorage.login == 1) { 
+                slider.slidePage(new HomeView(service).render().$el);
+            } else {
+                slider.slidePage(new LoginView().render().$el);
+            }
         });
 
         router.addRoute('register', function() {
             console.log('register');
             slider.slidePage(new RegisterView().render().$el);
+        });
+
+        router.addRoute('logout', function() {
+            console.log('logout');
+            localStorage.login = 0
+            slider.slidePage(new LoginView().render().$el);
         });
 
         router.addRoute('home', function() {
@@ -35,7 +44,7 @@
         router.addRoute('event/:id', function(id) {
             console.log('details1');
             service.findById(id, function(output){
-                slider.slidePage(new EmployeeView(output).render().$el);
+                slider.slidePage(new EventView(output).render().$el);
             });
         });
 
@@ -55,7 +64,7 @@
         router.addRoute('location/events/', function() {
             console.log('details2');
             service.getAll(function(output){
-                slider.slidePage(new EmployeeLocView().render().$el);
+                slider.slidePage(new EventLocView().render().$el);
             });
         });
 
